@@ -3,13 +3,13 @@
 // ——————————————————————————————————————————————————
 
 class TextScramble {
-  constructor(el) {
-    this.el = el;
+  constructor(em) {
+    this.em = em;
     this.chars = '!<>-_\\/[]{}—=+*^?#________';
     this.update = this.update.bind(this);
   }
   setText(newText) {
-    const oldText = this.el.innerText;
+    const oldText = this.em.innerText;
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise(resolve => this.resolve = resolve);
     this.queue = [];
@@ -43,7 +43,7 @@ class TextScramble {
         output += from;
       }
     }
-    this.el.innerHTML = output;
+    this.em.innerHTML = output;
     if (complete === this.queue.length) {
       this.resolve();
     } else {
@@ -70,8 +70,8 @@ const phrases = [
 'and walking the path'];
 
 
-const el = document.querySelector('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]');
-const fx = new TextScramble(el);
+const em = document.querySelector('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]');
+const fx = new TextScramble(em);
 
 let counter = 0;
 const next = () => {

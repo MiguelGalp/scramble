@@ -69,9 +69,15 @@ const phrases = [
 'between knowing the path',
 'and walking the path'];
 
+function contains(selector, text) {
+  var elements = document.querySelectorAll(selector);
+  return [].filter.call(elements, function(element){
+    return RegExp(text).test(element.textContent);
+  });
+}
 
-const el = document.querySelector('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]');
-const fx = new TextScramble(el);
+const elemento = contains('div', 'FESTIVAL NUEVA ÓPERA');
+const fx = new TextScramble(elemento);
 
 let counter = 0;
 const next = () => {

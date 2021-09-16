@@ -76,7 +76,7 @@ function contains(selector, text) {
   });
 }
 
-const elemento = contains('div', 'FESTIVAL NUEVA ÓPERA');
+const elemento = contains('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]', 'FESTIVAL NUEVA ÓPERA');
 const fx = new TextScramble(elemento);
 
 let counter = 0;
@@ -86,5 +86,5 @@ const next = () => {
   });
   counter = (counter + 1) % phrases.length;
 };
-
+console.log(elemento)
 next();

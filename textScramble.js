@@ -70,7 +70,7 @@ const phrases = [
 'and walking the path'];
 
 
-const el = document.querySelector('[data-block-id="8ea14da2-4227-4559-b318-ea8696146c79"] .notion-text-block');
+const el = document.querySelector('[data-block-id="8ea14da2-4227-4559-b318-ea8696146c79"] > div > div > div');
 const fx = new TextScramble(el);
 
 let counter = 0;

@@ -70,8 +70,8 @@ const phrases = [
 'and walking the path'];
 
 
-const el = document.querySelector('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]');
-const fx = new TextScramble(el);
+const textToScramble = document.querySelector('[data-block-id="cd3385cd-df45-459e-a246-90267cb6c01d"]');
+const fx = new TextScramble(textToScramble);
 
 let counter = 0;
 const next = () => {
